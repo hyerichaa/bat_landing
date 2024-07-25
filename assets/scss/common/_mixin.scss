@@ -1,0 +1,102 @@
+$vw-viewport: 375;
+@function get-vw($target) {
+    $vw-context: $vw-viewport * 0.01 * 1px;
+    @return #{'min('calc($target / $vw-context * 1vw), $target')'};
+}
+
+@mixin blind {
+    position:absolute; 
+    width: 0;
+    height: 0;
+    font-size: 0; 
+    overflow:hidden;
+    z-index:-1;
+}
+
+@mixin text_blind {
+    font-size: $font_size_small;
+    text-indent:-9999px;
+    visibility: hidden;
+}
+
+@mixin pos_center {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@mixin image_center {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+@mixin text-ellipsis() {
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+ 
+@mixin text-ellipsisClamp($line, $line-height) {
+    display: -webkit-box;
+    max-height: $line * $line-height;
+    line-height:$line-height;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -wekbit-line-clamp: $line;
+    word-wrap:break-word;
+}
+
+
+@mixin pc_full {
+    @media screen and (max-width:$desktop_full_width) {
+        @content;
+    }
+}
+
+@mixin pc_size_l {
+    @media screen and (max-width:$desktop_l_width) {
+        @content;
+    }
+}
+
+@mixin pc_size_m {
+    @media screen and (max-width:$desktop_m_width) {
+        @content;
+    }
+}
+
+@mixin pc_size_s {
+    @media screen and (max-width:$desktop_s_width) {
+        @content;
+    }
+}
+
+@mixin tablet_l {
+    @media screen and (max-width:$tablet_l_width) {
+        @content;
+    }
+}
+
+@mixin tablet_s {
+    @media screen and (max-width:$tablet_s_width) {
+        @content;
+    }
+}
+
+@mixin mobile_l {
+    @media screen and (max-width:$mobile_l_width) {
+        @content;
+    }
+}

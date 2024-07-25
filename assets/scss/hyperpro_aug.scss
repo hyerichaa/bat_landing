@@ -1,0 +1,962 @@
+@charset "UTF-8";
+@import './common/variables';
+@import './common/reset';
+@import './common/mixin';
+
+@font-face {
+    font-family: "Onemobile";
+    src: url("ONEMobileOTFRegular.eot");
+    src: url("../fonts/ONEMobileOTFRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ONEMobileOTFRegular.woff2") format("woff2"), url("../fonts/ONEMobileOTFRegular.woff") format("woff"), url("../fonts/ONEMobileOTFRegular.ttf") format("truetype");
+    font-weight: 400;
+  }
+@font-face {
+    font-family: "Onemobile";
+    src: url("../fonts/ONEMobileOTFLight.eot");
+    src: url("../fonts/ONEMobileOTFLight.eot?#iefix") format("embedded-opentype"), url("../fonts/ONEMobileOTFLight.woff2") format("woff2"), url("../fonts/ONEMobileOTFLight.woff") format("woff"), url("../fonts/ONEMobileOTFLight.ttf") format("truetype");
+    font-weight: 300;
+  }
+@font-face {
+    font-family: "Onemobile";
+    src: url("../fonts/ONEMobileOTFBold.eot");
+    src: url("../fonts/ONEMobileOTFBold.eot?#iefix") format("embedded-opentype"), url("../fonts/ONEMobileOTFBold.woff2") format("woff2"), url("../fonts/ONEMobileOTFBold.woff") format("woff"), url("../fonts/ONEMobileOTFBold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+
+$ff_ko : 'Onemobile', 'NotoSans', sans-serif;
+html, body {
+    &::-webkit-scrollbar {display:none;} 
+}
+
+body.disabled {
+    height:100%; 
+    min-height:100%; 
+    overflow:hidden; 
+    touch-action:none;
+}
+body .bat-wrapper {
+    max-width: unset;
+}
+
+.pc_only {
+    display:block;
+}
+
+.mo_only {
+    display:none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.glo-contents {
+    font-family:'Mont', 'Onemobile', 'NotoSans', sans-serif;
+    margin-top: 80px;
+}
+.mont{
+    font-family:'Mont', 'NotoSans', sans-serif;
+    font-weight: 500 !important;
+    font-size: 1.03em;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 0 1.25vw;
+    font-size: 1.25vw;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5625vw;
+    &__rec{
+        display: flex;
+        max-width: 335px;
+        width: 17.4479vw;
+        max-height: 69px;
+        height: 3.5938vw;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+    }
+    &__line{
+        display: flex;
+        max-width: 335px;
+        width: 17.4479vw;
+        max-height: 69px;
+        height: 3.5938vw;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #FFF;
+        background: rgba(0, 0, 0, 0.30);
+        backdrop-filter: blur(12px);
+        color: #fff;
+    }
+}
+
+.arrow{
+    width: 0.75vw;
+    height: 0.75vw;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='14' fill='none'%3E%3Cpath d='M.8 13.7a1 1 0 0 1 0-1.4L6 7 .8 1.7A1 1 0 0 1 2.2.3l6 6c.4.4.4 1 0 1.4l-6 6a1 1 0 0 1-1.4 0Z' fill='%23000'/%3E%3C/svg%3E") 50% 50%/contain no-repeat;
+    margin-left: 8px;
+    &.wht{
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='14' fill='none'%3E%3Cpath d='M.8 13.7a1 1 0 0 1 0-1.4L6 7 .8 1.7A1 1 0 0 1 2.2.3l6 6c.4.4.4 1 0 1.4l-6 6a1 1 0 0 1-1.4 0Z' fill='%23fff'/%3E%3C/svg%3E") 50% 50%/contain no-repeat;
+    }
+}
+
+.text_deco{
+    font-weight: 700;
+    position: relative;
+    &:after{
+        content: '';
+        width: 100%;
+        height: 0.2604vw;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+    }
+}
+
+
+.main{
+    width: 100vw !important;
+
+    overflow: hidden;
+    position: relative;
+
+    &__kv01{
+        width: 100%;
+        height: 100vh;
+        background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/kv.png) no-repeat center / cover;
+        position: relative;
+
+        .inner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate( 0, -50%);
+        }
+        .txt{
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+
+            &__ttl{
+                font-size: 5.7813vw;
+                margin-bottom: 0.5208vw;
+            }
+            &__sub{
+                font-size: 3.4375vw;
+                margin-bottom: 2.6042vw;
+            }
+        }
+        
+        .noti{
+            display: block;
+            text-align: center;
+            font-size: 1.0417vw;
+            color: #fff;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+    }
+    &__kv02{
+        width: 100%;
+        height: 100vh;
+        background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/kv_2.jpg) no-repeat center  / cover;
+        /* 애니메이션2 */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        .glo__logo{
+            position: absolute;
+            top: 5.5%;
+            left: 4.5%;
+            width: 11.45vw;
+            height: 8vw;
+            background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/logo.png) 50% 50%/contain no-repeat;
+            text-indent: -9999px;
+        }
+        .ttl{
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+            text-align: right;
+            p{
+                font-size: 3.2292vw;
+                font-weight: 700;
+                line-height: 1.5;
+                letter-spacing: -0.02em;
+                color: #fff;
+                margin-bottom: 1.1979vw;
+            }
+            img{
+                width: 65%;
+            }
+        }
+        .noti{
+            position: absolute;
+            bottom: 3%;
+            left: 2%;
+            color: #FFF;
+            font-family: "Noto Sans KR";
+            font-size: 0.7292vw;
+            font-weight: 400;
+        }
+    }
+}
+
+.story{
+    width: 100%;
+    padding: 5.2083vw 0;
+    background: linear-gradient(180deg, #6F5D94 0%, #5F4F83 100%);
+    position: relative;
+    top: -1px;
+    h3{
+        font-size: 3.3333vw;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 3.8542vw;
+    }
+    .wrap{
+        display: flex;
+        gap: 0 1.25vw;
+        text-align: center;
+        max-width: 75vw;
+        margin: 0 auto;
+    }
+
+    &__box{
+        width: 100%;
+        position: relative;
+        padding: calc(32.5vw + 3.125vw) 0 3.125vw;
+        background-color: #fff;
+        border-radius: 2.0833vw;
+        .people{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 36.8750vw;
+            height: 32.5vw;
+        }
+        .dev{
+            width: 12.6042vw;
+            height:12.6042vw;
+            margin: 0 auto;
+        }
+        &.killdren{
+            background-color: #856EB0;
+            .story__txt{
+                color: #fff;
+                &::before, &::after{
+                    width: 3.2292vw;
+                    height: 2.6042vw;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                &::before{
+                    content: "";
+                    background-image: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/story_dq3.svg);
+                    top: 2.6042vw;
+                }
+                &::after{
+                    content: "";
+                    background-image: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/story_dq4.svg);
+                    bottom: 0.5208vw;
+                }
+            }
+        }
+    }
+    &__txt{
+        color: #856EB0;
+        font-size: 1.4583vw;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        position: relative;
+        padding: 6.7708vw 0 4.6875vw;
+        &::before, &::after{
+            width: 3.2292vw;
+            height: 2.6042vw;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &::before{
+            content: "";
+            background-image: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/story_dq.svg);
+            top: 2.6042vw;
+        }
+        &::after{
+            content: "";
+            background-image: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/story_dq2.svg);
+            bottom: 0.5208vw;
+        }
+    }
+}
+
+.event{
+    width: 100%;
+    background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/event_bg.png) no-repeat center 100% / cover;
+    padding: 5.2083vw 0 6.25vw;
+    text-align: center;
+    position: relative;
+    top: -1px;
+    h3{
+        font-size: 3.3333vw;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 2.2396vw;
+    }
+    .date{
+        display: inline-block;
+        text-align: center;
+        padding: 0.9375vw 2.9688vw;
+        text-align: center;
+        color: #fff;
+        font-size: 1.25vw;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        border-radius: 110px;
+        border: 1px solid #FFF;
+        background: rgba(0, 0, 0, 0.30);
+        backdrop-filter: blur(5px);
+        margin-bottom: 3.6458vw;
+        span{
+            font-weight: 600;
+        }
+    }
+    .inner{
+        max-width: 49.5833vw;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__list{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0.5208vw;
+            margin-bottom: 5.3646vw;
+            li{
+                img{
+                    width: 10.8854vw;
+                    height: 10.8854vw;
+                    margin-bottom: 1.5625vw;
+                }
+                .sub{
+                    font-size: 1.4583vw;
+                    line-height: 1.3;
+                    letter-spacing: -0.03em;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__teabox{
+        width: 100%;
+        background-color: #fff;
+        border-radius: 2.0833vw;
+        padding: 3.2813vw 6.5885vw 3.2813vw 17.8906vw;
+        position: relative;
+        margin-bottom: 2.6042vw;
+        img{
+            position: absolute;
+            left: 6.5104vw;
+            bottom: 0;
+            width: 9.7396vw;
+            height: 17.6563vw;
+        }
+        p{
+            color: #4BACC6;
+            text-align: center;
+            font-size: 1.25vw;
+            line-height: 1.8;
+            letter-spacing: -0.03em;
+        }
+    }
+    .title{
+        font-size: 4.0625vw;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        color: #fff;
+        margin-bottom: 5.2083vw;
+        .text_deco{
+            color: #4BACC6;
+            &:after{
+                height: 0.2604vw;
+                background-color: #4BACC6;
+            }
+        }
+    }
+    .btn{
+        justify-content: center;
+        &__rec{
+            width: 20.9375vw;
+            max-width: none;
+            padding: 1.0417vw 1.0417vw;
+        }
+    }
+}
+.ups{
+    width: 100%;
+    padding: 5.2083vw 0;
+    color: #000;
+    h3{
+        font-size: 3.3333vw;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        text-align: center;
+        margin-bottom: 1.5625vw;
+    }
+    .text_deco{
+        &::after{
+            background-color: #000;
+        }
+    }
+    .des{
+        font-size: 2.1875vw;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        text-align: center;
+        margin-bottom: 3.6458vw;
+    }
+    
+    .slider{
+        position: relative;
+        max-width: 75vw;
+        margin: 0 auto;
+        &__ttl{
+            width: 100%;
+            display: flex;
+            gap: 0 1.25vw;
+            justify-content: space-around;
+            margin-bottom: 4.6875vw;
+            li{
+                flex: 1 1 0;
+                color: #AEAEAE;
+                font-size: 1.4583vw;
+                text-align: center;
+                line-height: 1.3;
+                position: relative;
+                &:after{
+                    content: "";
+                    width: 100%;
+                    height: 0.2604vw;
+                    background-color: #CECECE;
+                    position: absolute;
+                    bottom: -0.7813vw;
+                    left: 0;
+                }
+                & .bar{
+                    height: 0.2604vw;
+                    position: absolute;
+                    bottom: -0.7813vw;
+                    left: 0;
+                    background-color: #F6714F;
+                    z-index: 2;
+                }
+                &.swiper-pagination-bullet{
+                    height: 1.9792vw;
+                    background-color: transparent;
+                    opacity: 1;
+                }
+                &.swiper-pagination-bullet-active {
+                    color: #F6714F;
+                    
+                }
+                &.swiper-pagination-bullet-active .bar {
+                    animation-name: countingBar;
+                    animation-duration: 5s;
+                    animation-timing-function: linear;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+        @keyframes countingBar {
+            0% {width: 0;}
+            100% {width:100%;}
+        }
+        .btn_next{
+            position: absolute;
+            top: 64%;
+            right: 1%;
+            width: 2.3438vw;
+            height: 2.3438vw;
+            background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/ico_right.png) no-repeat center / contain;
+            z-index: 2;
+            cursor: pointer;
+        }
+        /* .btn_prev{
+            position: absolute;
+            top: 64%;
+            left: 1%;
+            width: 2.3438vw;
+            height: 2.3438vw;
+            background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/ico_right.png) no-repeat center / contain;
+            z-index: 2;
+            cursor: pointer;
+            transform: rotate(180deg);
+        } */
+    }
+    .swiper-slide{
+        text-align: center;
+        h4{
+            font-size: 1.7708vw;
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.0417vw;
+        }
+        p{
+            font-size: 1.4583vw;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: -0.03em;
+            margin-bottom: 3.6458vw;
+        }
+        img{
+            width: 100%;
+        }
+        span{
+            font-size: 0.7292vw;
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: -0.03em;
+            display: block;
+            text-align: left;
+            margin-top: 0.5208vw;
+        }
+    }
+}
+.notice{
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    .inner{
+        max-width: 75vw;
+        margin: 0 auto;
+    }
+    .top{
+        width: 100%;
+        background-color: #262626;
+        height: 6.25vw;
+        display: flex;
+        
+        .inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 77.0833vw;
+        }
+        .wrap{
+            display: flex;
+            align-items: center;
+            p{
+                font-size: 1.4583vw;
+                font-weight: 700;
+                margin-left: 1.7188vw;
+            }
+        }
+        .ico_noti{
+            width: 2.6041666667vw;
+            aspect-ratio: 1/1;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50' fill='none'%3E%3Cpath d='M24.9795 35.5026V20.6379M24.9795 15.4759H25.0003M45.8337 25.0003C45.8337 36.5063 36.5063 45.8337 25.0003 45.8337C13.4944 45.8337 4.16699 36.5063 4.16699 25.0003C4.16699 13.4944 13.4944 4.16699 25.0003 4.16699C36.5063 4.16699 45.8337 13.4944 45.8337 25.0003Z' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            display: inline-block;
+        }
+        .ico_arrow{
+            width: 2.6041666667vw;
+            aspect-ratio: 1/1;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50' fill='none'%3E%3Cpath d='M38 30.2682L35.7812 32.4863L25.5 22.2081L15.2187 32.4863L13 30.2682L25.5 17.7719L38 30.2682Z' fill='white'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            display: inline-block;
+            &.active{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .bottom{
+        width: 100%;
+        padding: 3.1250vw 0 ;
+        .ttl{
+            font-size: 1.4583vw;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.25vw;
+        }
+        ul{
+            margin-bottom: 2.0833vw;
+            padding-left: 1.0417vw;
+            li{
+                font-size: 1.0417vw;
+                line-height: 1.7;
+                letter-spacing: -0.02em;
+                list-style: disc;
+                font-weight: 300;
+                word-break: keep-all;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width : 768px) {
+    .pc_only {
+        display:none;
+    }
+    
+    .mo_only {
+        display:block;
+    }
+    .arrow{
+        width: 2.6667vw;
+        height: 2.6667vw;
+    }
+    .glo-contents{
+        margin-top: 100px;
+    }
+    .main{
+        &__kv01{
+            background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/kv_m.png)no-repeat center / cover;
+
+            .inner{
+                width: 100%;
+                padding: 0 6.4vw;
+                top: auto;
+                left: auto;
+                bottom: 12%;
+                transform: none;
+                
+            }
+            .txt{
+                &__ttl{
+                    font-size: 13.8667vw;
+                    line-height: 1.2;
+                    text-align: center;
+                    text-shadow: 0px 4px 4px #6D5C91;
+                }
+                &__sub{
+                    font-size: 8.2667vw;
+                    margin-bottom: 5.3333vw;
+                    text-align: center;
+                }
+            }
+            .btn{
+                gap: 0 4.2667vw;
+                margin-bottom: 2.6667vw;
+                a{
+                    width: 100%;
+                    height: 11.7333vw;
+                    font-size: 4.2667vw;
+                }
+            }
+            .noti{
+                font-size: 2.6667vw;
+            }
+        }
+        &__kv02{
+            background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/kv_2_m.jpg)no-repeat center / cover;
+            .glo__logo{
+                width: 20.8000vw ;
+                height: 14.6667vw;
+                top: 3%;
+                left: 7.5%;
+            }
+            .ttl{
+                width: 100%;
+                padding: 0 6.4vw;
+                right: auto;
+                bottom: 12%;
+                p{
+                    font-size: 8vw;
+                }
+            }
+            .noti{
+                font-size: 2.4vw;
+                line-height: 1.5;
+                font-weight: 300;
+            }
+        }
+    }
+    .story{
+        padding: 13.3333vw 0;
+        h3{
+            font-size: 7.2vw;
+            line-height: 1.3;
+            opacity: 0.98;
+            margin-bottom: 8vw;
+        }
+        .wrap{
+            flex-direction: column;
+            gap: 5.3333vw 0;
+            max-width: none;
+            padding: 0 6.4vw;
+        }
+        &__box{
+            border-radius: 6vw;
+            padding: 93.6vw 0 8vw;
+            .people{
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+            }
+            .dev{
+                width: 32vw;
+                height: 32vw;
+            }
+            &.killdren{
+                .story__txt{
+                    &::before, &::after{
+                        width: 9.0667vw;
+                        height: 7.2vw;
+                    }
+                    &::before{
+                        top: 8.6042vw;
+                    }
+                    &::after{
+                        bottom: 3.5208vw;
+                    }
+                }
+            }
+        }
+        &__txt{
+            font-size: 3.7333vw;
+            padding: 21.0667vw 0 16vw;
+            &::before, &::after{
+                width: 9.0667vw;
+                height: 7.2vw;
+            }
+            &::before{
+                top: 8.6042vw;
+            }
+            &::after{
+                bottom: 3.5208vw;
+            }
+        }
+    }
+    .event{
+        width: 100%;
+        padding: 13.3333vw 6.4vw 9.3333vw;
+        h3{
+            font-size: 7.2vw;
+            line-height: 1.3;
+            margin-bottom: 8vw;
+        }
+        .date{
+            width: 92%;
+            font-size: 4.8vw;
+            padding: 2.32vw 4.6vw;
+            margin-bottom: 5.6vw;
+        }
+        .inner{
+            width: 100%;
+            max-width: none;
+            margin: 0;
+        }
+        &__list{
+            width: 100%;
+            margin: 0 6.9333vw 28.8vw;
+            ul{
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8vw 0;
+                li{
+                    display: flex;
+                    align-items: center;
+                    
+                    img{
+                        width: 21.3333vw;
+                        height: 21.3333vw;
+                        margin-right: 8vw;
+                        margin-bottom: 0;
+                    }
+                    .sub{
+                        font-size: 4.8vw;
+                        text-align: left;
+                        font-weight: 400;
+                        line-height: 1.3;
+                    }
+                }
+            }
+        }
+        &__teabox{
+            padding: 28.8vw 0 5.2vw;
+            margin-bottom: 13.3333vw;
+            img{
+                bottom: auto;
+                top: -30%;
+                left: 50%;
+                transform: translate(-50%,  0);
+                width: 19.3333vw;
+                height: 40vw;
+            }
+            p{
+                font-size: 3.7333vw;
+            }
+        }
+        .title{
+            font-size: 10.6667vw;
+            line-height: 1.3;
+            margin-bottom: 13.3333vw;
+        }
+        .btn__rec{
+            width: 74.6667vw;
+            height: 11.7333vw;
+            font-size: 4.2667vw;
+        }
+    }
+    .ups{
+        width: 100%;
+        padding: 16vw 0 0;
+        h3{
+            font-size: 7.2vw;
+            margin-bottom: 5.3333vw;
+        }
+        .des{
+            font-size: 4.2667vw;
+            margin-bottom: 16vw;
+        }
+
+        .slider_m{
+            text-align: center;
+            position: relative;
+            &__content{
+                margin-bottom: 18.6667vw;
+                strong{
+                    display: block;
+                    font-size: 4.8vw;
+                    margin-bottom: 3.2vw;
+                }
+                p{
+                    font-size: 3.7333vw;
+                    line-height: 1.4;
+                    margin-bottom: 8vw;
+                }
+                .btn_next{
+                    position: absolute;
+                    top: 58%;
+                    right: 1%;
+                    width: 10.6667vw;
+                    height: 10.6667vw;
+                    background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/ico_right.png) no-repeat center / contain;
+                    z-index: 2;
+                    cursor: pointer;
+                }
+                .btn_prev{
+                    position: absolute;
+                    top: 58%;
+                    left: 1%;
+                    width: 10.6667vw;
+                    height: 10.6667vw;
+                    background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/ico_right.png) no-repeat center / contain;
+                    z-index: 2;
+                    cursor: pointer;
+                    transform: rotate(180deg);
+                }
+                &.cont_03{
+                    margin-bottom: 0;
+                }
+            }
+           
+            .noti{
+                position: absolute;
+                bottom: 5vw;
+                left: 50%;
+                transform: translate(-50%, 0);
+                font-size: 2.4vw;
+                line-height: 1.5;
+                text-align: center;
+                z-index: 5;
+                color: #fff;
+                font-weight: 300;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .notice{
+        .inner{
+            max-width: none;
+            width: 100% !important;
+            margin: 0 6.4vw;
+        }
+        .top{
+            height: 18.6667vw;
+            .wrap{
+                .ico_noti{
+                    width: 8.5333vw;
+                    height: 8.5333vw;
+                }
+                p{
+                    font-size: 5.3333vw;
+                }
+            }
+            .ico_arrow{
+                width: 10.6667vw;
+                height: 10.6667vw;
+            }
+            
+        }
+        .bottom{
+            padding: 6.4vw;
+            .inner{
+                margin: 0;
+            }
+            .ttl{
+                font-size: 4vw;
+                margin-bottom: 2.1333vw;
+                letter-spacing: -0.04em;
+            }
+            ul{
+                margin-left: 2vw;
+                margin-bottom: 6.4vw;
+                li{
+                    font-size: 2.9333vw;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }     
+}
+@media screen and (max-width : 490px) {
+    .main{
+        &__kv01{
+            .txt{
+                &__ttl{
+                    font-size: 10vw;
+                }
+                &__sub{
+                    font-size: 6vw;
+                }
+            }
+        }
+    }
+}

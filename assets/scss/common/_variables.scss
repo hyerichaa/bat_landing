@@ -1,0 +1,66 @@
+// Colors
+$pr_org           :#E5451C;
+$pr_blk           :#2a2c2c;
+
+$hp_red           :#d55e7d;
+$hp_org           :#E17D55;
+$hp_blk           :#47464b;
+$hp_gol           :#c8ae95;
+$hp_mit           :#ccd6c2;
+$hp_blu           :#85c6d7;
+
+$bt_def           :#4a4d5b;
+$bt_hov           :#b33515;
+$bt_dis           :#bdbdbd;
+
+$kakao_bg         :#fae300;
+$kakao_tx         :#391b1b;
+ 
+$air_c              : #58A6E4;
+
+// Typography
+$ff_base : 'Mont', 'NotoSans', sans-serif !default;
+$ff_ko   : 'NotoSans', sans-serif !default;
+$ff_en   : 'Mont', sans-serif !default;
+$ff_sd   : 'SDGyeokdongG2', sans-serif !default;
+
+$c_bk           :#000000;
+$c_wt           :#ffffff; 
+$g_s1           :#333333;
+$g_s2           :#666666;
+$g_s3           :#999999;
+$g_s4           :#bdbdbd;
+$g_s5           :#e2e2e2;
+$g_s6           :#dbdbdb;
+
+$c_light        :#f8f9fa;
+$c_dark         :#1D1D1D;
+$c_disable      :#e2e2e2;
+
+/* Body font Size */
+$bd_base : 16px; // 16px
+$bd_1 : 28px; // 28px
+$bd_2 : 24px; // 24px
+$bd_3 : 20px; // 20px
+$bd_4 : 18px; // 18px
+$bd_5 : 14px; // 14px
+
+$hd_line1 : 100px; // 100px
+$hd_line2 : 72px; // 72px
+$hd_line3 : 64px; // 64px
+$hd_line4 : 52px; // 52px
+$hd_line5 : 40px; // 40px
+$hd_line6 : 32px; // 32px
+$hd_line7 : 30px; // 30px
+
+// Media Query Break Point
+$desktop_wide_width      : 2560px;
+$desktop_full_width      : 1920px;
+$desktop_l_width         : 1680px;
+$desktop_m_width         : 1440px;
+$desktop_s_width         : 1280px;
+$tablet_l_width          : 1024px;
+$tablet_s_width          : 768px;
+$mobile_l_width          : 480px;
+$mobile_m_width          : 375px;
+$mobile_s_width          : 320px; 

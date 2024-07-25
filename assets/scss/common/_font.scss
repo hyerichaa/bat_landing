@@ -1,0 +1,103 @@
+/* Mont */
+@font-face {
+    font-family: 'Mont';
+    font-weight: 300;
+    src: url('../fonts/Mont-Light.eot');
+    src: url('../fonts/Mont-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Mont-Light.woff2') format('woff2'),
+	url('../fonts/Mont-Light.woff') format('woff'), url('../fonts/Mont-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mont';
+    font-weight: 400;
+    src: url('../fonts/Mont-Regular.eot');
+    src: url('../fonts/Mont-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Mont-Regular.woff2') format('woff2'),
+	url('../fonts/Mont-Regular.woff') format('woff'), url('../fonts/Mont-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Mont';
+	font-weight: 600;
+	src: url('../fonts/Mont-SemiBold.eot');
+	src: url('../fonts/Mont-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Mont-SemiBold.woff2') format('woff2'),
+	url('../fonts/Mont-SemiBold.woff') format('woff'), url('../fonts/Mont-SemiBold.ttf') format('truetype');
+  }
+
+@font-face {
+	font-family: 'Mont';
+	font-weight: 700;
+	src: url('../fonts/Mont-Bold.eot');
+	src: url('../fonts/Mont-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Mont-Bold.woff2') format('woff2'),
+	url('../fonts/Mont-Bold.woff') format('woff'), url('../fonts/Mont-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Mont';
+	font-weight: 900;
+	src: url('../fonts/Mont-Heavy.eot');
+	src: url('../fonts/Mont-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/Mont-Heavy.woff2') format('woff2'),
+	url('../fonts/Mont-Heavy.woff') format('woff'), url('../fonts/Mont-Heavy.ttf') format('truetype');
+}	
+
+/* Noto Sans KR */
+@font-face {
+    font-family: 'NotoSans';
+    font-weight: 300;
+    src: url("../fonts/notokr-light.eot");
+    src: local("notokr-light"), url("../fonts/notokr-light.eot?#iefix") format("embedded-opentype"), url("../fonts/notokr-light.woff2") format("woff2"), url("../fonts/notokr-light.woff") format("woff"), url("../fonts/notokr-light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    font-weight: 400;
+    src: url("../fonts/notokr-regular.eot");
+    src: local("notokr-regular"), url("../fonts/notokr-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/notokr-regular.woff2") format("woff2"), url("../fonts/notokr-regular.woff") format("woff"), url("../fonts/notokr-regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    font-weight: 500;
+    src: url("../fonts/notokr-medium.eot");
+    src: local("notokr-medium"), url("../fonts/notokr-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/notokr-medium.woff2") format("woff2"), url("../fonts/notokr-medium.woff") format("woff"), url("../fonts/notokr-medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    font-weight: 700;
+    src: url("../fonts/notokr-bold.eot");
+    src: local("notokr-bold"), url("../fonts/notokr-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/notokr-bold.woff2") format("woff2"), url("../fonts/notokr-bold.woff") format("woff"), url("../fonts/notokr-bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: '';
+    src: url('ONEMobileOTFRegular.eot');
+    src: url('../fonts/ONEMobileOTFRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ONEMobileOTFRegular.woff2') format('woff2'),
+        url('../fonts/ONEMobileOTFRegular.woff') format('woff'),
+        url('../fonts/ONEMobileOTFRegular.ttf') format('truetype');
+    font-weight:400;
+}
+
+@font-face {
+    font-family: 'Onemobile';
+    src: url('../fonts/ONEMobileOTFLight.eot');
+    src: url('../fonts/ONEMobileOTFLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ONEMobileOTFLight.woff2') format('woff2'),
+        url('../fonts/ONEMobileOTFLight.woff') format('woff'),
+        url('../fonts/ONEMobileOTFLight.ttf') format('truetype');
+    font-weight:300;
+}
+
+@font-face {
+    font-family: 'Onemobile';
+    src: url('../fonts/ONEMobileOTFBold.eot');
+    src: url('../fonts/ONEMobileOTFBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ONEMobileOTFBold.woff2') format('woff2'),
+        url('../fonts/ONEMobileOTFBold.woff') format('woff'),
+        url('../fonts/ONEMobileOTFBold.ttf') format('truetype');
+    font-weight:700;
+}
+
+
+
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=de82f655-0e98-4b3b-b570-770f4c0e3623&fontids=6005180,6005194,6005206,6005218,6005230,6005241,6005253,6005265,6005276,6005286,6005298,6005310,6005322,6005334");
