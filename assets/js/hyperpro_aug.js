@@ -122,6 +122,28 @@ const animate = (item) => {
     );
 }
 
+//이벤트 텍스트 롤링
+
+$(document).ready(function(){
+    var board = '.rolling';
+    var listHeight = $(board).find('li').height();
+  
+    setInterval(function(){
+      $(board).find('ul').animate({
+        top: '-=' + listHeight
+  
+      },'slow',function(){
+  
+        $(this).find('li').first().appendTo($(this));
+        $(this).css('top',0);
+        $(board).find('li a').attr('tabindex','-1');
+        $(board).find('li:first a').attr('tabindex','0');
+      });
+    },800);
+  });
+
+
+
 //유의사항
 $('.notice .top').on('click', () => {
     $('.ico_arrow').toggleClass('active');

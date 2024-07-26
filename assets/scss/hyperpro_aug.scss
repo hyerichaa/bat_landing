@@ -132,6 +132,7 @@ body .bat-wrapper {
         width: 100%;
         height: 100vh;
         background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/kv.png) no-repeat center / cover;
+        /* background: url(/images/2024/pro_aug/kv.png) no-repeat center / cover; */
         position: relative;
 
         .inner{
@@ -168,8 +169,8 @@ body .bat-wrapper {
     &__kv02{
         width: 100%;
         height: 100vh;
+        /* background: url(/images/2024/pro_aug/kv_2.jpg) no-repeat center  / cover; */
         background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/kv_2.jpg) no-repeat center  / cover;
-        /* 애니메이션2 */
         position: absolute;
         top: 0;
         left: 0;
@@ -310,6 +311,7 @@ body .bat-wrapper {
 .event{
     width: 100%;
     background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/event_bg.png) no-repeat center 100% / cover;
+    /* background: url(/images/2024/pro_aug/event_bg.png) no-repeat center 100% / cover; */
     padding: 5.2083vw 0 6.25vw;
     text-align: center;
     position: relative;
@@ -391,6 +393,9 @@ body .bat-wrapper {
         }
     }
     .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 4.0625vw;
         font-weight: 700;
         line-height: 1.3;
@@ -402,6 +407,28 @@ body .bat-wrapper {
             &:after{
                 height: 0.2604vw;
                 background-color: #4BACC6;
+            }
+        }
+        .wrap{
+            display: flex;
+            align-items: center;
+        }
+        .rolling{
+            width: 12.0417vw;
+            height: 5.3vw;
+            overflow: hidden;
+            margin: 0 1vw 0;
+            color: #4BACC6;
+            position: relative;
+            line-height: 1.2;
+            &:after{
+                content: "";
+                width: 11.0417vw;
+                height: 0.2604vw;
+                background-color: #4BACC6;
+                position: absolute;
+                top: 5vw;
+                left: 0.5vw;
             }
         }
     }
@@ -504,13 +531,24 @@ body .bat-wrapper {
             z-index: 2;
             cursor: pointer;
         }
-        /* .btn_prev{
+        .btn_prev{
             position: absolute;
             top: 64%;
             left: 1%;
             width: 2.3438vw;
             height: 2.3438vw;
             background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/ico_right.png) no-repeat center / contain;
+            z-index: 2;
+            cursor: pointer;
+            transform: rotate(180deg);
+        }
+        /* .btn_prev{
+            position: absolute;
+            top: 64%;
+            left: 1%;
+            width: 2.3438vw;
+            height: 2.3438vw;
+            background: url(/images/2024/pro_aug/ico_right.png) no-repeat center / contain;
             z-index: 2;
             cursor: pointer;
             transform: rotate(180deg);
@@ -683,6 +721,7 @@ body .bat-wrapper {
         }
         &__kv02{
             background: url(/content/dam/glo-jp/korea-images/brand-pages/images/2024/pro_aug/kv_2_m.jpg)no-repeat center / cover;
+            /* background: url(/images/2024/pro_aug/kv_2_m.jpg)no-repeat center / cover; */
             .glo__logo{
                 width: 20.8000vw ;
                 height: 14.6667vw;
@@ -721,11 +760,10 @@ body .bat-wrapper {
         }
         &__box{
             border-radius: 6vw;
-            padding: 93.6vw 0 8vw;
+            padding: 107.6vw 0 8vw;
             .people{
                 width: 100%;
                 height: auto;
-                aspect-ratio: 1 / 1;
             }
             .dev{
                 width: 32vw;
@@ -823,9 +861,20 @@ body .bat-wrapper {
             }
         }
         .title{
+            flex-direction: column;
+            gap: 1vw 0;
             font-size: 10.6667vw;
             line-height: 1.3;
             margin-bottom: 13.3333vw;
+            .rolling{
+                width: 30.6667vw;
+                height: 13.5vw;
+                &::after{
+                    width: 30.6667vw;
+                    top: 13vw;
+                    height: 2vw;
+                }
+            }
         }
         .btn__rec{
             width: 74.6667vw;
